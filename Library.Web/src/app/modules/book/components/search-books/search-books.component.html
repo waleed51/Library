@@ -1,0 +1,29 @@
+<div class="search-container">
+  <form class="search-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Search for books</mat-label>
+      <input matInput [formControl]="searchControl" placeholder="Type to search...">
+    </mat-form-field>
+  </form>
+  <mat-list *ngIf="!NoData">
+    <h3 mat-subheader>Results</h3>
+    <div class="book-card-container">
+      <mat-card class="book-card" *ngFor="let book of books;let i=index">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{ book.bookTitle }}</mat-card-title>
+            <mat-card-subtitle>{{ book.author }} - {{ book.publishDate  | date: 'yyyy/MM/dd'  }}</mat-card-subtitle>
+            <img mat-card-md-image src={{book.coverBase64}}  alt="Book Cover">
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          {{book.bookDescription}}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-list>
+  <strong *ngIf="NoData">No data found.</strong>
+  
+  <mat-paginator [length]="data.totalItems" (page)="pageChanged($event)">
+  </mat-paginator>
+</div>
