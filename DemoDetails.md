@@ -20,3 +20,8 @@ Frontend:
 * Cancellation: Use switchMap to cancel in-flight API requests if a new search is initiated.
 * Error handling: Implement error handling for the API requests.
 * Accessibility: Make search UI simple and accessible.
+
+![image](https://github.com/waleed51/Library/assets/18492471/576c4789-5cab-4e6b-b711-e83a01b7624f)
+
+![image](https://github.com/waleed51/Library/assets/18492471/fa58658e-851f-4cf5-b07b-cb8edc8f4d6b)
+
