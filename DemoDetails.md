@@ -6,7 +6,7 @@ Backend:
 * validation and protection.
 * Create computed columns and for the JSON attributes which frequently search against and  Materialized View to enhance the performance of searching and query the complex data.
 * To protect against SQL Injection, used parameterized queries.
-* the wasn't enough to add test project to perform tests.
+* the time wasn't enough to add test project to perform tests.
 
 -- To can query the complex data stored in Book table specially for long base64 string in json string object "CoverBase64", I divide the "Book" table into two views (Materialized View), one for book details and another for book cover
 and and create indexs to the new columns to try to decrease the query time, there is another alternative scenario to perform that which by using "Stored Procedure" as it save the excution plan for the queries.
